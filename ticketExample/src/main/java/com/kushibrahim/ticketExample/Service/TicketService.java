@@ -34,11 +34,10 @@ public class TicketService implements ITicketService {
 
     @Override
     @Transactional
-    public void delete(Ticket ticket) {
-        ticketRepository.delete(ticket);
-        ticket.setTicketSold(ticket.getTicketSold()-1);
+    public void delete(int id) {
+        ticketRepository.delete(id);
     }
-
+    
     @Override
     public Ticket findByViewTicket(String ticketNumber) {
         return ticketRepository.findByViewTicket(ticketNumber);

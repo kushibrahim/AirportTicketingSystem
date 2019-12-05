@@ -30,7 +30,7 @@ public class AirlineRepository implements IAirlineRepository {
     @Override
     public void add(Airline airline) {
         Session session = entityManager.unwrap(Session.class);
-        session.saveOrUpdate(airline);
+        session.save(airline);
     }
 
     @Override

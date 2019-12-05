@@ -35,8 +35,9 @@ public class TicketRepository implements ITicketRepository {
     }
 
     @Override
-    public void delete(Ticket ticket) {
+    public void delete(int id) {
         Session session = entityManager.unwrap(Session.class);
+        Ticket ticket = session.get(Ticket.class,id);
         session.delete(ticket);
     }
 

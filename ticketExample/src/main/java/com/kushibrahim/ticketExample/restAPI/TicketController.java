@@ -77,9 +77,9 @@ public class TicketController {
         }
     }
 
-    @DeleteMapping("/deleteTicket")
-    public void delete(Ticket ticket) {
-        ticketService.delete(ticket);
+    @DeleteMapping("/deleteTicket/{id}")
+    public void delete(@PathVariable int id) {
+        ticketService.delete(id);
     }
 
 

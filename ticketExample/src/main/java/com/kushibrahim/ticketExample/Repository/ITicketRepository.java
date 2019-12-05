@@ -8,7 +8,7 @@ public interface ITicketRepository {
 
     List<Ticket> getAll();
     void add(Ticket ticket);
-    void delete(Ticket ticket);
+    void delete(int id);
 
     Ticket findByViewTicket(String ticketNumber);
 }

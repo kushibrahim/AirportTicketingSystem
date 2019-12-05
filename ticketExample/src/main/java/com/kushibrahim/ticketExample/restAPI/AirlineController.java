@@ -2,7 +2,10 @@ package com.kushibrahim.ticketExample.restAPI;
 
 import com.kushibrahim.ticketExample.Entities.Airline;
 import com.kushibrahim.ticketExample.Service.IAirlineService;
+import com.kushibrahim.ticketExample.Service.IAirportService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
